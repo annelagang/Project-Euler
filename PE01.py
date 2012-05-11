@@ -8,37 +8,10 @@ Find the sum of all the multiples of 3 or 5 below 1000.'''
 
 import time
 
-def solve():
-    limit = 1000
-    sum = 0
-
-    nums = xrange(1, limit)
-
-    ##for num in nums:
-    ##    if(num % 3 == 0) or (num % 5 == 0):
-    ##        sum = sum + num
-                
-    ##print sum
-
-    #predicate
-    def isMultiple(num, multiples):
-        for multiple in multiples:
-            if(num % multiple == 0):
-                return True
-        return False
-
-    multiples = [3,5]
-
-    for num in nums:
-        if(isMultiple(num, multiples)):
-            sum = sum + num
-
-    return sum
-
 
 if __name__ == '__main__':
     start = time.clock()
-    print 'Answer:', solve()
+    print sum(x for x in xrange(1, 1000) if x % 3 == 0 or x % 5 == 0)
     print 'Time elapsed:', (time.clock() - start)
 
     
