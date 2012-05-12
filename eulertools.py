@@ -1,3 +1,5 @@
+import math
+
 def is_even(n):
     return n % 2 == 0
 
@@ -11,7 +13,7 @@ def is_palindrome(s):
 def is_prime(n):
     # n**0.5 == math.sqrt(n)
     n = abs(n)
-    for x in range(2, n**0.5 + 1):
+    for x in range(2, int(n**0.5 + 1)):
         if n % x == 0:
             return False
     return True
